@@ -47,8 +47,7 @@ def write_file_in_dir():
 
 
 def program():
-    user_input = input("Please define what you would like to do. \nType write file to create a file in your current directory. \nType read file to read a file in your current directory. \nType remove file to remove a file in your current directory. \nType create dir to create a directory in your current directory. \nType remove dir to remove a directory in your current directory. \nType write file in dir to write a file into a directory anywhere on your pc. \nType remove file in dir to remove a file from a directory anywhere on your pc. \nType remove dir from dir to remove a directory from anywhere on your PC. \nType create dir in dir to create a directory from anywhere on your PC. \nType close to end the program.").lower(); 
-    
+    user_input = input("Please define what you would like to do. \nType write file in dir to write a file into a directory anywhere on your pc. \nType remove file in dir to remove a file from a directory anywhere on your pc. \nType remove dir from dir to remove a directory from anywhere on your PC. \nType create dir in dir to create a directory from anywhere on your PC. \nType close to end the program.").lower(); 
     if user_input == "write file in dir":
         write_file_in_dir(); 
     if user_input == "close":
