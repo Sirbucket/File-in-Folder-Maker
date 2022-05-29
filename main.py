@@ -35,14 +35,14 @@ def remove_dir(dir_name): #Removes a directory.
         print("This directory does not exist, cannot continue!"); 
 
 def write_file_in_dir(): #Writes a file in a directory.
-    parent_dir = input("Please state the parent directory."); 
+    parent_dir = input("Please state the parent directory.").lower(); 
     if not os.path.exists(parent_dir):
         print("That is not a path that currently exists your pc, please try again!"); 
         while not os.path.exists(parent_dir):
             print("That is not a path that currently exists your pc, please try again!"); 
-            parent_dir = input("Please state the parent directory."); 
+            parent_dir = input("Please state the parent directory.").lower(); 
 
-    file_name = input("Please state the name of the file with the extension you desire! (Only accepts text formats.)"); 
+    file_name = input("Please state the name of the file with the extension you desire! (Only accepts text formats.)").lower(); 
     path = os.path.join(parent_dir, file_name); 
     write_file(path); 
     if os.path.exists(path):
@@ -53,14 +53,14 @@ def write_file_in_dir(): #Writes a file in a directory.
     program(); 
 
 def create_dir_in_dir(): #Writes a directory in a directory.
-    parent_dir = input("Please state the parent directory."); 
+    parent_dir = input("Please state the parent directory.").lower(); 
     if not os.path.exists(parent_dir):
         print("That is not a path that currently exists your pc, please try again!"); 
         while not os.path.exists(parent_dir):
             print("That is not a path that currently exists your pc, please try again!"); 
-            parent_dir = input("Please state the parent directory."); 
+            parent_dir = input("Please state the parent directory.").lower(); 
 
-    child_dir = input("Please state the child directory."); 
+    child_dir = input("Please state the child directory.").lower(); 
     path = os.path.join(parent_dir, child_dir); 
     create_dir(path); 
 
@@ -72,14 +72,14 @@ def create_dir_in_dir(): #Writes a directory in a directory.
     program(); 
     
 def remove_file_in_dir(): #Removes a file in a directory.
-    parent_dir = input("Please state the parent directory."); 
+    parent_dir = input("Please state the parent directory.").lower(); 
     if not os.path.exists(parent_dir):
         print("That is not a path that currently exists your pc, please try again!"); 
         while not os.path.exists(parent_dir):
             print("That is not a path that currently exists your pc, please try again!"); 
-            parent_dir = input("Please state the parent directory."); 
+            parent_dir = input("Please state the parent directory.").lower(); 
 
-    file_name = input("Please state the name of the file with the extension you desire! (Only accepts text formats.)"); 
+    file_name = input("Please state the name of the file with the extension you desire! (Only accepts text formats.)").lower(); 
     path = os.path.join(parent_dir, file_name); 
     remove_file(path); 
     if os.path.exists(path):
@@ -90,14 +90,14 @@ def remove_file_in_dir(): #Removes a file in a directory.
     program(); 
 
 def remove_dir_from_dir(): #Removes a directory in a directory.
-    parent_dir = input("Please state the parent directory."); 
+    parent_dir = input("Please state the parent directory.").lower(); 
     if not os.path.exists(parent_dir):
         print("That is not a path that currently exists your pc, please try again!"); 
         while not os.path.exists(parent_dir):
             print("That is not a path that currently exists your pc, please try again!"); 
-            parent_dir = input("Please state the parent directory."); 
+            parent_dir = input("Please state the parent directory.").lower(); 
 
-    child_dir = input("Please state the child directory."); 
+    child_dir = input("Please state the child directory.").lower(); 
     path = os.path.join(parent_dir, child_dir); 
     remove_dir(path); 
 
@@ -109,15 +109,15 @@ def remove_dir_from_dir(): #Removes a directory in a directory.
     program(); 
 
 def create_dir_and_file(): #Creates a directory and a file.
-    parent_dir = input("Please state the parent directory."); 
+    parent_dir = input("Please state the parent directory.").lower(); 
     if not os.path.exists(parent_dir):
         print("That is not a path that currently exists your pc, please try again!"); 
         while not os.path.exists(parent_dir):
             print("That is not a path that currently exists your pc, please try again!"); 
-            parent_dir = input("Please state the parent directory."); 
+            parent_dir = input("Please state the parent directory.").lower(); 
 
-    child_dir = input("Please state the child directory."); 
-    file_name = input("Please state the name of the file with the extension you desire! (Only accepts text formats.)"); 
+    child_dir = input("Please state the child directory.").lower(); 
+    file_name = input("Please state the name of the file with the extension you desire! (Only accepts text formats.)").lower(); 
 
     path = os.path.join(parent_dir, child_dir); 
     create_dir(path); 
