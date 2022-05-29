@@ -35,14 +35,14 @@ def remove_dir(dir_name): #Removes a directory.
         print("This directory does not exist, cannot continue!"); 
 
 def write_file_in_dir(): #Writes a file in a directory.
-    parent_dir = input("Please state the parent directory.").lower(); 
+    parent_dir = str(input("Please state the parent directory.").lower()); 
     if not os.path.exists(parent_dir):
         print("That is not a path that currently exists your pc, please try again!"); 
         while not os.path.exists(parent_dir):
             print("That is not a path that currently exists your pc, please try again!"); 
-            parent_dir = input("Please state the parent directory.").lower(); 
+            parent_dir = str(input("Please state the parent directory.").lower()); 
 
-    file_name = input("Please state the name of the file with the extension you desire! (Only accepts text formats.)").lower(); 
+    file_name = str(input("Please state the name of the file with the extension you desire! (Only accepts text formats.)").lower()); 
     path = os.path.join(parent_dir, file_name); 
     write_file(path); 
     if os.path.exists(path):
@@ -53,14 +53,14 @@ def write_file_in_dir(): #Writes a file in a directory.
     program(); 
 
 def create_dir_in_dir(): #Writes a directory in a directory.
-    parent_dir = input("Please state the parent directory.").lower(); 
+    parent_dir = str(input("Please state the parent directory.").lower()); 
     if not os.path.exists(parent_dir):
         print("That is not a path that currently exists your pc, please try again!"); 
         while not os.path.exists(parent_dir):
             print("That is not a path that currently exists your pc, please try again!"); 
-            parent_dir = input("Please state the parent directory.").lower(); 
+            parent_dir = str(input("Please state the parent directory.").lower()); 
 
-    child_dir = input("Please state the child directory.").lower(); 
+    child_dir = str(input("Please state the child directory.").lower()); 
     path = os.path.join(parent_dir, child_dir); 
     create_dir(path); 
 
@@ -72,14 +72,14 @@ def create_dir_in_dir(): #Writes a directory in a directory.
     program(); 
     
 def remove_file_in_dir(): #Removes a file in a directory.
-    parent_dir = input("Please state the parent directory.").lower(); 
+    parent_dir = str(input("Please state the parent directory.").lower()); 
     if not os.path.exists(parent_dir):
         print("That is not a path that currently exists your pc, please try again!"); 
         while not os.path.exists(parent_dir):
             print("That is not a path that currently exists your pc, please try again!"); 
-            parent_dir = input("Please state the parent directory.").lower(); 
+            parent_dir = str(input("Please state the parent directory.").lower()); 
 
-    file_name = input("Please state the name of the file with the extension you desire! (Only accepts text formats.)").lower(); 
+    file_name = str(input("Please state the name of the file with the extension you desire! (Only accepts text formats.)").lower()); 
     path = os.path.join(parent_dir, file_name); 
     remove_file(path); 
     if os.path.exists(path):
@@ -90,14 +90,14 @@ def remove_file_in_dir(): #Removes a file in a directory.
     program(); 
 
 def remove_dir_from_dir(): #Removes a directory in a directory.
-    parent_dir = input("Please state the parent directory.").lower(); 
+    parent_dir = str(input("Please state the parent directory.").lower()); 
     if not os.path.exists(parent_dir):
         print("That is not a path that currently exists your pc, please try again!"); 
         while not os.path.exists(parent_dir):
             print("That is not a path that currently exists your pc, please try again!"); 
-            parent_dir = input("Please state the parent directory.").lower(); 
+            parent_dir = str(input("Please state the parent directory.").lower()); 
 
-    child_dir = input("Please state the child directory.").lower(); 
+    child_dir = str(input("Please state the child directory.").lower()); 
     path = os.path.join(parent_dir, child_dir); 
     remove_dir(path); 
 
@@ -109,15 +109,15 @@ def remove_dir_from_dir(): #Removes a directory in a directory.
     program(); 
 
 def create_dir_and_file(): #Creates a directory and a file.
-    parent_dir = input("Please state the parent directory.").lower(); 
+    parent_dir = str(input("Please state the parent directory.").lower()); 
     if not os.path.exists(parent_dir):
         print("That is not a path that currently exists your pc, please try again!"); 
         while not os.path.exists(parent_dir):
             print("That is not a path that currently exists your pc, please try again!"); 
-            parent_dir = input("Please state the parent directory.").lower(); 
+            parent_dir = str(input("Please state the parent directory.").lower()); 
 
-    child_dir = input("Please state the child directory.").lower(); 
-    file_name = input("Please state the name of the file with the extension you desire! (Only accepts text formats.)").lower(); 
+    child_dir = str(input("Please state the child directory.").lower()); 
+    file_name = str(input("Please state the name of the file with the extension you desire! (Only accepts text formats.)").lower()); 
 
     path = os.path.join(parent_dir, child_dir); 
     create_dir(path); 
@@ -132,7 +132,7 @@ def create_dir_and_file(): #Creates a directory and a file.
     program(); 
 
 def program(): #Runs everything.
-    user_input = input("Please define what you would like to do. \nType write file in dir to write a file into a directory anywhere on your pc. \nType remove file in dir to remove a file from a directory anywhere on your pc. \nType remove dir from dir to remove a directory from anywhere on your PC. \nType create dir in dir to create a directory from anywhere on your PC. \nType create dir and file to create a dir with a file inside of it anywhere on your PC. \nType close to end the program. \n").lower(); 
+    user_input = str(input("Please define what you would like to do. \nType write file in dir to write a file into a directory anywhere on your pc. \nType remove file in dir to remove a file from a directory anywhere on your pc. \nType remove dir from dir to remove a directory from anywhere on your PC. \nType create dir in dir to create a directory from anywhere on your PC. \nType create dir and file to create a dir with a file inside of it anywhere on your PC. \nType close to end the program. \n").lower()); 
     if user_input == "write file in dir":
         write_file_in_dir(); 
     else:
