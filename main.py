@@ -1,24 +1,30 @@
 import os; 
 
-def write_file(filename):
-    open(filename, "w"); 
+def write_file(filename): #Writes a file.
+    if not os.path.exists(filename):
+        open(filename, "w"); 
+    else:
+        print("This file already exists!"); 
 
-def read_file(filename):
-    open(filename, "r"); 
+def read_file(filename): #save this for later. Reads a file.
+    if os.path.exists(filename):
+        open(filename, "r"); 
+    else:
+        print("This file does not exist!"); 
 
-def remove_file(filename):
+def remove_file(filename): #Removes a file.
     if os.path.exists(filename):
         os.remove(filename); 
     else:
         print("This file does not exist!"); 
 
-def create_dir(dir_name):
+def create_dir(dir_name): #Creates a directory.
     if not os.path.exists(dir_name):
         os.mkdir(dir_name); 
     else:
         print("This directory already exists! \nSkipping creating this directory!")
 
-def remove_dir(dir_name):
+def remove_dir(dir_name): #Removes a directory.
     if os.path.isdir(dir_name):
         if not any(os.scandir(dir_name)):
             print("This directory is empty, deleting!"); 
@@ -148,4 +154,5 @@ def program():
                         else:
                             print("Please input a statement or type close to exit."); 
                             program(); 
+
 program(); 
